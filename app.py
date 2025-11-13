@@ -40,5 +40,7 @@ if st.button("Predict"):
     # Display results
     if prediction[0] == 1:
         st.error(f"Predicted: Diabetes positive (Risk: {probability[0][1]*100:.2f}%)")
+        st.dataframe(input_df, width='stretch')
     else:
         st.success(f"Predicted: Diabetes negative (Risk: {probability[0][1]*100:.2f}%)")
+        st.dataframe(input_df, width='stretch')
